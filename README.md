@@ -74,19 +74,21 @@ https://github.com/vergecurrency/electrum-xvg/archive/master.zip
 
 -download python 2.7 for windows here: https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi
 
--download Microsoft Visual C++ Compiler for Python 2.7 here: http://www.microsoft.com/en-us/download/confirmation.aspx?id=44266
+-download Microsoft Visual C++ Compiler for Python 2.7 here: https://www.microsoft.com/en-us/download/details.aspx?id=44266
 
--download python qt4: http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.3/PyQt4-4.11.3-gpl-Py2.7-Qt4.8.6-x64.exe
+-download python qt4: https://sourceforge.net/projects/pyqt/
 
--then in ms visual studio command prompt, go into the directory electrum-xvg:
+-then in MS Visual Studio command prompt (32 or 64 bit), cd into the directory electrum-xvg-tor-master then:
 
 pyrcc4 icons.qrc -o gui/qt/icons_rc.py
 
-py -m pip install pip pyasn1 pyasn1-modules pbkdf2 tlslite qrcode ecdsa ltc_scrypt pyrcc
+python -m pip install --upgrade pip
 
-py setup.py install
+python -m pip install pyasn1 pyasn1-modules pbkdf2 tlslite qrcode ecdsa ltc_scrypt
 
-py electrum-xvg
+python setup.py install
+
+python electrum-xvg
 
 1c) INSTALLING WITH MAC OSX
 -----------------
